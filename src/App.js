@@ -1,24 +1,22 @@
+// There are 3 main files for this Redux project, namely...
+// 1) App.js: This component. Note: <Provider store={store}><Counter/></Provider>
+// 2) Counter.js: Has the main component layout and methods.
+// 3) index.js (inside the "store" folder): Sets up the "Reducer" and "Store".
+
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Provider } from 'react-redux'
+import Counter from './Counter';
+import store from './store';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Redux Example.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Provider store={store}>
+          <Counter/>
+        </Provider>
       </div>
     );
   }
