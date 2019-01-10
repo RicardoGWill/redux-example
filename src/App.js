@@ -10,6 +10,9 @@ import { Provider } from 'react-redux'
 import Counter from './Counter';
 import store from './store';
 
+// Note the "Provider" component wrapping the "Counter" component.
+// The "store" is passed as a prop to the "Provider" component.
+// Redux creates the "Provider" component.  I do not have to create one myself.
 class App extends Component {
   render() {
     return (

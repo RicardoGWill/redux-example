@@ -10,7 +10,7 @@ const Counter = (props) => {
   console.log('render', props)
   return (
     <div>
-      <h1>I am a counter!</h1>
+      <h1>Counter Project</h1>
       <p>Count: {props.count}</p>
       <button onClick={props.onIncrementClick}>Increment</button>
     </div>
@@ -28,7 +28,9 @@ function mapStateToProps(state) {
 // Note: ES6 version of a function to dispatch to props.
 const mapDispatchToProps = (dispatch) => {
   return {
+
     // This is the method used to increment the number.
+    // It is the button's "onClick" method, as can be seen above.
     onIncrementClick: () => {
       console.log('click');
       // Note: In Redux, actions are objects that have a property called "type".
@@ -39,6 +41,7 @@ const mapDispatchToProps = (dispatch) => {
       // Actions must be "dispatched", as shown below.
       dispatch(action);
     }
+    
   }
 };
 
