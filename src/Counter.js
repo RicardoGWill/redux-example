@@ -10,7 +10,7 @@ const Counter = (props) => {
   console.log('render', props)
   return (
     <div>
-      <h1>Counter Project</h1>
+      <h2>Counter Project</h2>
       <p>Count: {props.count}</p>
       <button onClick={props.onIncrementClick}>Increment</button>
     </div>
@@ -41,7 +41,7 @@ const mapDispatchToProps = (dispatch) => {
       // Actions must be "dispatched", as shown below.
       dispatch(action);
     }
-    
+
   }
 };
 
